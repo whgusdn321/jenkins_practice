@@ -4,7 +4,8 @@ pipeline {
     string(name: 'CONTAINER_NAME', defaultValue: 'hello')
   }
   agent { 
-    label 'MASTER'
+    label 'master
+    '
   }
   tools {
     jdk 'JDK'
