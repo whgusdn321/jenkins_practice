@@ -10,6 +10,14 @@ pipeline {
     jdk 'JDK'
   }
   stages {
+    stage('stop deamons') {
+      steps {
+        dir("productreview") {
+          sh "gradle --stop"
+        }        
+      }
+    }
+    
     stage('Clean Jar') {
       steps {
         dir("productreview") {
@@ -25,7 +33,6 @@ pipeline {
         }        
       }
     }
-
         
     stage('Run Docker Compose') {
       steps {
