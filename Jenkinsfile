@@ -14,7 +14,9 @@ pipeline {
   stages {
     stage('Build Jar') {
       steps {
-        sh "./productreview/gradlew bootJar"
+        dir("productreview") {
+          sh "./gradlew bootJar"
+        }        
       }
     }
 
