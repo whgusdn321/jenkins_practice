@@ -7,7 +7,7 @@ pipeline {
     label 'master'
   }
   tools {
-    jdk 'JDK'
+    jdk 'jdk-8'
   }
   stages {
     stage('stop deamons') {
