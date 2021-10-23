@@ -7,7 +7,7 @@ pipeline {
     label 'hello'
   }
   tools {
-    jdk 'jdk-8'
+    jdk 'JDK-8'
   }
   stages {
     stage('Build Jar') {
