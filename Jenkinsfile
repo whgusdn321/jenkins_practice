@@ -10,10 +10,18 @@ pipeline {
     jdk 'JDK'
   }
   stages {
-    stage('Build Jar') {
+    stage('Clean Jar') {
       steps {
         dir("productreview") {
           sh "./gradlew clean"
+        }        
+      }
+    }
+    
+    stage('Boot Jar') {
+      steps {
+        dir("productreview") {
+          sh "./gradlew bootJar"
         }        
       }
     }
