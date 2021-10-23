@@ -38,7 +38,7 @@ pipeline {
       steps {
         sh """
           docker-compose down --volumes
-          sudo docker-compose up
+          docker-compose up -d
         """
       }
     }
