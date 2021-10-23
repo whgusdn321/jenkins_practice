@@ -13,7 +13,7 @@ pipeline {
     stage('stop deamons') {
       steps {
         dir("productreview") {
-          sh "gradle --stop"
+          sh "./gradlew --stop"
         }        
       }
     }
