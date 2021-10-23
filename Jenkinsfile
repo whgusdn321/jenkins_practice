@@ -1,8 +1,4 @@
 pipeline {
-  parameters {
-    string(name: 'IMAGE_NAME', defaultValue: 'hello')
-    string(name: 'CONTAINER_NAME', defaultValue: 'hello')
-  }
   agent { 
     label 'p3'
   }
