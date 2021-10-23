@@ -8,8 +8,6 @@ pipeline {
   }
   tools {
     jdk 'JDK'
-    gradle 'gradle'
-    dockerTool 'docker'
   }
   stages {
     stage('Build Jar') {
