@@ -13,7 +13,7 @@ pipeline {
     stage('Build Jar') {
       steps {
         dir("productreview") {
-          sh "./gradlew bootJar"
+          sh "./gradlew clean ./gradlew bootJar"
         }        
       }
     }
