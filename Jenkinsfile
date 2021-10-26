@@ -13,19 +13,11 @@ pipeline {
         }        
       }
     }
-    
-    stage('Clean Jar') {
+      
+    stage('Clean boot Jar') {
       steps {
         dir("productreview") {
-          sh "./gradlew clean"
-        }        
-      }
-    }
-    
-    stage('Boot Jar') {
-      steps {
-        dir("productreview") {
-          sh "./gradlew bootJar"
+          sh "./gradlew clean bootJar"
         }        
       }
     }
@@ -33,7 +25,7 @@ pipeline {
     stage('Run Docker Compose') {
       steps {
         sh """
-          docker-compose down --volumes
+          docker-compose down
           docker-compose up -d
         """
       }
